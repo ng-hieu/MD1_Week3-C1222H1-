@@ -1,3 +1,4 @@
+//Bài 1
 function check () {
 let browser = document.getElementById("browser").value;
 let a = "Okay we support these browsers too" ;
@@ -18,6 +19,7 @@ let c = "You've got the Edge!";
          break;
  }
 }
+//Bài 2
 let a = +prompt ("a?", '');
 switch (a){
     case 0: alert("0");

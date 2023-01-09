@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<img id="image" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="Ball"
+     style="width: 200px"> <br>
+<button onclick="move ()" type="button">Click to go on the right >>></button>
+<script>
+    let image = null;
+    image = document.getElementById("image");
+    function init () {
+        image = document.getElementById("image");
+        image.style.position = "relative";
+        image.style.left = "0px";
+        console.log(image);
+    }
+    function move () {
+        image.style.left = parseInt(image.style.left) + 200 + "px";
+        console.log(image.style.left);
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
