@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+  <style>
+    button {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <table style="border: 1px solid black; width: auto; height: auto">
+    <tr>
+      <th colspan="4"><input type="text" id="result"></th>
+    </tr>
+    <tr>
+      <td><button type="button" value = "1" onclick="disp('1')">1</button></td>
+      <td><button type="button" value = "2" onclick="disp('2')">2</button></td>
+      <td><button type="button" value = "3" onclick="disp('3')">3</button></td>
+      <td><button type="button" value = "+" onclick="disp('+')">+</button></td>
+    <tr>
+      <td><button type="button" value = "4" onclick="disp('4')">4</button></td>
+      <td><button type="button" value = "5" onclick="disp('5')">5</button></td>
+      <td><button type="button" value = "6" onclick="disp('6')">6</button></td>
+      <td><button type="button" value = "-" onclick="disp('-')">-</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" value = "7" onclick="disp('7')">7</button></td>
+      <td><button type="button" value = "8" onclick="disp('8')">8</button></td>
+      <td><button type="button" value = "9" onclick="disp('9')">9</button></td>
+      <td><button type="button" value = "*" onclick="disp('x')">x</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" value = "C" onclick="clearcom('C')">C</button></td>
+      <td><button type="button" value = "0" onclick="disp('0')">0</button></td>
+      <td><button type="button" onclick="final()">=</button></td>
+      <td><button type="button" value = "/" onclick="disp('/')">/</button></td>
+    </tr>
+  </table>
+  <script>
+    function clearcom() {
+      document.getElementById("result").value = "";
+    }
+    function disp(value) {
+      document.getElementById("result").value += value;
+    }
+    function final(){
+      let c = document.getElementById("result").value;
+      let p = eval(c);
+      document.getElementById("result").value = p;
+    }
+  </script>
+</body>
+</html>
