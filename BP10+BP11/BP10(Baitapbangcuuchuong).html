@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng vửu chương</title>
+    <style>
+        td{
+            border: 1px solid black;
+            border-spacing: 0px;
+        }
+    </style>
+</head>
+<body>
+  <div id="result"></div>
+  <script>
+    let i, j, table;
+    table = '<table style="border: 1px solid black; border-collapse: collapse ;" >';
+    for (i = 1; i <= 10; i++){
+        table = table + '<tr>';
+        for (j = 1; j<=10; j++){
+            table = table + '<td>' + i + "*" + j + "=" + i*j + '</td>';
+        }
+        table = table + '</tr>';
+    }
+    table = table + '</table>';
+    document.getElementById("result").innerHTML = table;
+  </script>
+</body>
+</html>

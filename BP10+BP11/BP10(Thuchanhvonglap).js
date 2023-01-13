@@ -50,3 +50,14 @@ function run3(){
        }
 
 }
+let n, m, tabl;
+tabl = '<table style=\"border: 1px solid black; width: 300px; padding: 3px; border-spacing: 1px">'
+for (n = 1; n<=10; n++){
+    tabl = tabl + '<tr>';
+    for (m = 1; m<=10;m++){
+        tabl = tabl + '<td>' + n*m + '</td>'
+    }
+    tabl = tabl + '</tr>';
+}
+tabl = tabl + '</table>';
+document.getElementById("run4").innerHTML = tabl;

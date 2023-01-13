@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+  <button type="button" onclick="run()">Run>></button>
+<script>
+  function run() {
+      let n = prompt("Khoảng đoán")
+      let b = Math.floor(Math.random() * n);
+      let count = 0;
+      while (n == "") {
+          alert("Phải nhập khoảng đoán");
+          n = prompt("Khoảng đoán ");
+      }
+      let a = prompt("Đoán số");
+      while (a == "") {
+          alert("Phải đoán số");
+          a = prompt("Đoán số");
+      }
+      while ((a != b) && (count <=3) ) {
+          count++;
+          if (count == 3) {
+              alert("Bạn đã hết lượt");
+          } else if (a > b) {
+              a = prompt("Số bạn đoán lớn hơn, đoán lại");
+          } else {
+              a = prompt("Số bạn đoán nhỏ hơn, đoán lại");
+          }
+      }
+      if (a == b) {
+          alert("Bạn đã đoán đúng");
+      }
+  }
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ẢNH MÈO</title>
 </head>
 <body>
 <div>
@@ -26,6 +26,28 @@
     document.getElementById("hinhanh").src = hinh1;
   };
 
+</script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 20 số đầu tiên trong dãy fibonacci.</title>
+</head>
+<body>
+<script>
+    let n = 0;
+    let m = 1;
+    let sum;
+    let c = 0;
+    for (i = 0; i<=20; i++){
+        sum = n+m;
+        sum = c + sum;
+        n=m;
+        m=sum;
+    }
+    document.write(sum);
 </script>
 </body>
 </html>

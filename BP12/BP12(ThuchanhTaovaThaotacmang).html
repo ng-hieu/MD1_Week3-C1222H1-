@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị mảng</title>
+</head>
+<body>
+<label><input type="text" id="add" placeholder="Add element"></label>
+<button type="button" onclick="Add_element()">Add</button>
+<button type="button" onclick="Display_element()">Display</button>
+<div id = "result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    function Add_element() {
+        array[x] = document.getElementById("add").value;
+        x++;
+        document.getElementById("result").value = "";
+        console.log(array);
+    }
+    function Display_element() {
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++){
+            e += array[i] +"<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>
