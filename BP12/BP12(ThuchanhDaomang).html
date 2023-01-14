@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo mảng</title>
+</head>
+<body>
+<script>
+    let array = [-3,5,1,3,2,10];
+   // let j;
+    let switchh = 0;
+    for (i = 0; i < array.length; i++) {
+        switchh = array[i];
+        array[i] = array[array.length-1-i];
+        array[array.length-1-i] = switchh;
+        document.write(array + "<br/>");
+    }
+
+    /*for (j = array.length - 1; j>=0; j--) {
+        document.write(array[j] + ", ");
+    }*/
+</script>
+</body>
+</html>
