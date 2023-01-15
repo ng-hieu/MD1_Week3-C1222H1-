@@ -125,9 +125,9 @@ function cauc() {
 
 function caud() {
     //Câu d: Nhập a là năm, in ra thế kỉ
-    let a = parseInt(document.getElementById("a").value);
-    let c = parseInt((a / 100) + 1);
-    let d = parseInt(a / 100);
+    let a = Math.trunc(document.getElementById("a").value);
+    let c = Math.trunc((a / 100) + 1);
+    let d = Math.trunc(a / 100);
     if (a % 100 === 0) {
         document.getElementById("resultd").innerHTML = "Thế kỷ của năm " + a + " là thế kỷ: " + d;
     } else {

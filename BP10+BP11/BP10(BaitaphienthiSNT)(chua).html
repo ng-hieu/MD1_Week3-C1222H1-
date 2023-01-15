@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  function checkSNT(number){
+    let demsouoc = 0
+    if(number < 2){
+      return false
+
+    }
+    for (let i = 1; i <= number; i++) {
+      if(number % i === 0){
+        demsouoc ++
+      }
+
+    }
+    if(demsouoc === 2){
+      return true
+    }
+
+  }
+  let number = +prompt('Nhap so luong SNT can in')
+  let count = 0
+  for (let i = 2; count < number; i++) {
+    if(checkSNT(i)){
+      count++
+      document.write(`So nguyen to thu ${count} la ` + i + '<br>')
+    }
+  }
+
+
+
+</script>
