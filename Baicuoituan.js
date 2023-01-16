@@ -142,14 +142,15 @@ function caue() {
     let c = parseFloat(document.getElementById("c").value);
     if (a + b > c && a + c > b && b + c > a) {
         document.getElementById("resulte").innerHTML = a + ", " + b + ", " + c + " là số đo 3 cạnh 1 tam giác.";
-        if (a === b || b === c || c === a) {
-            document.getElementById("resulte1").innerHTML = "Đây là tam giác cân!!!";
+        if (Math.pow(a, 2) + Math.pow(b, 2) === Math.pow(c, 2) || Math.pow(a, 2) + Math.pow(c, 2) === Math.pow(b, 2) || Math.pow(b, 2) + Math.pow(c, 2) === Math.pow(a, 2)) {
+            document.getElementById("resulte1").innerHTML = "Đây là tam giác vuông!!!";
         } else if (a === b && a === c && b === c) {
             document.getElementById("resulte1").innerHTML = "Đây là tam giác đều!!!";
-        } else if (Math.pow(a,2) + Math.pow(b,2) === Math.pow(c,2) || Math.pow(a,2) + Math.pow(c,2) === Math.pow(b,2) || Math.pow(b,2) + Math.pow(c,2) === Math.pow(a,2)) {
-            document.getElementById("resulte1").innerHTML = "Đây là tam giác vuông!!!";
+        } else if (a === b || b === c || c === a) {
+            document.getElementById("resulte1").innerHTML = "Đây là tam giác cân!!!";
         }
     } else {
         document.getElementById("resulte").innerHTML = a + ", " + b + ", " + c + " KHÔNG phải là số đo 3 cạnh 1 tam giác.";
     }
 }
+

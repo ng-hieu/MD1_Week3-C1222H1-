@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tim gia tri trong mang</title>
 </head>
 <body>
+<label><input type="text" id="input"></label>
+<button type="button" onclick="check()">Check</button>
+<div id="result"></div>
+<script>
+    let x = [2, 6, 98, 1, 234, 52, 21];
 
+    function check() {
+
+        let y = +document.getElementById("input").value;
+        let result = x.indexOf(y)
+        if(result !== -1){
+            document.getElementById("result").innerHTML = "Giá trị nhập vào nằm trong mảng";
+        }
+        else {
+            document.getElementById("result").innerHTML = "Giá trị nhập vào không nằm trong mảng";
+
+        }
+        // for (let i = 0; i < x.length; i++) {
+        //     if (y === x[i]) {
+        //         document.getElementById("result").innerHTML = "Giá trị nhập vào nằm trong mảng";
+        //         break;
+        //
+        //     } else {
+        //         document.getElementById("result").innerHTML = "Giá trị nhập vào không nằm trong mảng";
+        //
+        //     }
+        // }
+    }
+</script>
 </body>
 </html>
